@@ -13,3 +13,5 @@ Essentially, we are permitted the use of just a LiDAR, since they often have pro
 However, when configuring with it we realized we had issues with updating the images to our small computer (NVIDIA AGX Orin), as it was supposed to upload at a theoretical 15 Hz, however it was doing less than 1 Hz, lol. So we not only needed to make the camera mounts better, but also improve the hardware or improve the code that is used to process all that data. It was also drifting somehow, so perhaps we put in the wrong constants, but we will try to get something to work eventually. 
 
 ![image](https://github.com/user-attachments/assets/b4d89711-5a3e-422b-a740-eb59b4545703)
+
+We are not doing some investigative work into the filtering methods that the LiDAR uses. As in right now we use a think called SemanticKITTI, which is a way to avoid scanning absolutely every single particle or object the LiDAR sees. For example you may only want to worry about curbs in your program, or stop signs, instead of some random person's suitcase down the street. 
